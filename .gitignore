@@ -1,17 +1,16 @@
-# Dependencies
+#  Závislosti Node.js
 node_modules/
 package-lock.json
 
-# Database
-*.database
-*.db-journal
+# Uživatelská databáze nebo výstupy
+/database/
 
-# Editor directories and files
+# Nastavení editorů (VS Code, JetBrains apod.)
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# OS files
+#Dočasné systémové soubory (macOS, Windows)
 .DS_Store
 Thumbs.db
