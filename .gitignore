@@ -14,3 +14,4 @@ package-lock.json
 #Dočasné systémové soubory (macOS, Windows)
 .DS_Store
 Thumbs.db
+#####
