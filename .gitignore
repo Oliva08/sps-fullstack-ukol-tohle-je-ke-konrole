@@ -3,13 +3,8 @@ node_modules/
 package-lock.json
 
 # Database
-*.db
+*.database
 *.db-journal
-
-# Logs
-logs
-*.log
-npm-debug.log*
 
 # Editor directories and files
 .vscode/
