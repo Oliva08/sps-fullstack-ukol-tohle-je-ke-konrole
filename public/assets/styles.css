@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #4a90e2;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+}
+
+.tab-btn:hover {
+  color: #2196F3;
+}
+
+.tab-btn.active {
+  border-bottom: 3px solid #2196F3;
+  color: #2196F3;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+form {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+.form-actions {
+  margin-top: 1.5rem;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #2196F3;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0b7dda;
+  color: white;
+}
+
+button.delete {
+  background-color: #f44336;
+  color: black;
+}
+
+button.delete:hover {
+  background-color: #d32f2f;
+  color: white;
+}
+
+button.edit {
+  background-color: #4CAF50;
+  color: black;
+}
+
+button.edit:hover {
+  background-color: #388E3C;
+  color: white;
+}
+
+#cancel-edit {
+  background-color: #999;
+  margin-left: 0.5rem;
+}
+
+#cancel-edit:hover {
+  background-color: #777;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit, .delete {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.delete {
+  background-color: #e74c3c;
+}
+
+.delete:hover {
+  background-color: #c0392b;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #666;
+}
+
+

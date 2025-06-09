@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Správa inventáře zmrzlinárny - aplikace pro sledování zásob, kategorií a dodavatelů">
+  <title>Zmrzlinárna - Správa inventáře</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Správa inventáře zmrzlinárny</h1>
+      <nav>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="items">Položky</button>
+          <button class="tab-btn" data-tab="categories">Kategorie</button>
+          <button class="tab-btn" data-tab="suppliers">Dodavatelé</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Items Tab -->
+    <section id="items-tab" class="tab-content active">
+      <div class="section-header">
+        <h2>Položky inventáře</h2>
+        <button id="add-item-btn">Přidat položku</button>
+      </div>
+      
+      <div class="search-bar">
+        <input type="text" id="search-items" placeholder="Vyhledat položku...">
+      </div>
+      
+      <div class="items-container">
+        <table id="items-table">
+          <thead>
+            <tr>
+              <th>Název</th>
+              <th>Množství</th>
+              <th>Kategorie</th>
+              <th>Dodavatel</th>
+              <th>Akce</th>
+            </tr>
+          </thead>
+          <tbody id="items-list">
+            <!-- Items will be loaded here -->
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Add/Edit Item Form (Hidden by default) -->
+      <div id="item-form-container" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3 id="form-title">Přidat položku</h3>
+          <form id="item-form">
+            <input type="hidden" id="item-id">
+            <div class="form-group">
+              <label for="item-name">Název:</label>
+              <input type="text" id="item-name" required>
+            </div>
+            <div class="form-group">
+              <label for="item-quantity">Množství:</label>
+              <input type="number" id="item-quantity" min="0" required>
+            </div>
+            <div class="form-group">
+              <label for="item-category">Kategorie:</label>
+              <select id="item-category" required>
+                <!-- Categories will be loaded here -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="item-supplier">Dodavatel:</label>
+              <select id="item-supplier" required>
+                <!-- Suppliers will be loaded here -->
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit" id="save-item">Uložit</button>
+              <button type="button" id="cancel-item">Zrušit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Tab -->
+    <section id="categories-tab" class="tab-content">
+      <h2>Kategorie</h2>
+      <div class="categories-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Název</th>
+            </tr>
+          </thead>
+          <tbody id="categories-list">
+            <!-- Categories will be loaded here -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Suppliers Tab -->
+    <section id="suppliers-tab" class="tab-content">
+      <h2>Dodavatelé</h2>
+      <div class="suppliers-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Název</th>
+              <th>Kontakt</th>
+            </tr>
+          </thead>
+          <tbody id="suppliers-list">
+            <!-- Suppliers will be loaded here -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Správa inventáře zmrzlinárny | Jan Patrik Oliveira</p>
+    </div>
+  </footer>
+
+  <!-- 404 Page Template (Hidden) -->
+  <template id="page-404">
+    <div class="error-container">
+      <h2>404 - Stránka nenalezena</h2>
+      <p>Omlouváme se, ale požadovaná stránka neexistuje.</p>
+      <a href="/">Zpět na hlavní stránku</a>
+    </div>
+  </template>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
+
